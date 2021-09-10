@@ -1,9 +1,10 @@
-﻿using System.Text;
+﻿using generic_rock_paper_scissors;
+using System.Text;
 
-class Ruleset
+class Ruleset : IRuleset
 {
 
-    public HashSet<Move> Moves { get; private set; }
+    public ICollection<Move> Moves { get; private set; }
 
 
     public GameResult GetPlayerResult(Move playerMove, Move enemyMove)
@@ -86,7 +87,7 @@ class Ruleset
         }
 
 
-        Moves = new(moves);
+        Moves = new HashSet<Move>(moves);
 
 
     }

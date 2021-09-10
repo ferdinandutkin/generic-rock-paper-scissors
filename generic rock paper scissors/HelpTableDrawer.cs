@@ -1,10 +1,11 @@
 ﻿using ConsoleTables;
+using generic_rock_paper_scissors;
 
 class HelpTableDrawer
 {
 
     private readonly ConsoleTable table;
-    public HelpTableDrawer(Ruleset ruleset)
+    public HelpTableDrawer(IRuleset ruleset)
     {
         var moves = ruleset.Moves;
 
